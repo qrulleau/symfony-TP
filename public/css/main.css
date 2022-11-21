@@ -1,0 +1,331 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+:root {
+  --primary-color : #CB7857;
+  --secondary-color :#ffffff; 
+  --background-color : #E4E4E4;
+  --tertiary-color : #E7E7E7;
+  --quinary-color : #999999;
+  --sinary-color : #BBBBBB;
+  --septenary-color : #EEEEEE;
+  --octonary-color :#D2430A;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+* {
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+  scrollbar-color: var(--primary-color);
+}
+.text-center {
+  text-align: center;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-start {
+  align-items: flex-start;
+}
+.direction-column {
+  flex-direction: column;
+}
+.white {
+  background-color: var(--secondary-color);
+}
+header .d-flex {
+  background-color: var(--primary-color);
+  padding: 24px 0 24px 48px;
+  gap: 32px;
+}
+header img {
+  height: 48px;
+}
+.nav-bar a {
+  padding: 16px 0 16px 48px;
+  width: 320px;
+  border-bottom: 1px solid #E7E7E7;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nav-bar a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: 350ms;
+}
+.nav-bar a:first-child{
+  margin-top: 40px;
+}
+.background {
+  height: 89vh;
+  background-color: var(--secondary-color);
+}
+.background-content {
+  width: 80vw;
+}
+.content {
+  margin: 40px 0 0 20px;
+}
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.col {
+  padding: 12px 15px;
+  background-color: var(--sinary-color);
+}
+.col-name {
+  width: 50%;
+  background-color: var(--quinary-color);
+}
+
+.col-customer,.col-host {
+  width: 25%;
+}
+.col-customer {
+  border-right: 1px solid var(--secondary-color);
+}
+.content h3 {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.content .input input {
+  width: 100vw;
+  border: none;
+}
+.content .col-name input {
+  width: 100vw;
+}
+.content .input .col {
+  display: flex;
+  justify-content: center;
+}
+.input .col-customer {
+  border-left: 1px solid var(--secondary-color);
+}
+.content .input .col-name,
+.content .input .col-host,
+.content .input .col-customer {
+  background-color: var(--septenary-color) ;
+}
+.footer-content {
+  padding: 20px 15px;
+}
+.selector {
+  gap: 8px;
+}
+.btn {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.selector-btn {
+  padding: 16px 28px;
+  border: none;
+  background-color: var(--septenary-color);
+  color: var(--quinary-color);
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+.selector-btn:hover {
+  text-decoration: underline var(--quinary-color);
+  transition: 500ms;
+}
+.selector-btn-active {
+  background-color: var(--secondary-color);
+}
+.btn:hover {
+  background-color: transparent;
+  transition: 400ms;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.empty {
+  background-color: transparent !important;
+  border: 1px solid var(--primary-color) !important;
+  color: var(--primary-color);
+}
+.empty:hover {
+  background-color: var(--primary-color) !important;
+  transition: 350ms;
+  color: var(--secondary-color);
+}
+.footer-content .d-flex {
+  gap: 16px;
+}
+.icon {
+  gap: 12px;
+}
+.d-none {
+  display: none;
+}
+.new-width {
+  width: 124px !important;
+}
+.new-width1 {
+  width: 91vw;
+}
+.feather-arrow-down {
+  stroke: white;
+}
+.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+.content-section {
+  display: none;
+  padding: 40px 32px;
+  margin-bottom: 24vh;
+}
+.content-section form .d-flex {
+  gap: 40px;
+}
+.content-section form > .d-flex {
+  margin-bottom: 12px;
+}
+.content-section form .d-flex .label {
+  margin-top: 8px;
+}
+.content-section form input {
+  padding: 8px;
+}
+.active-content {
+  display: block !important;
+}
+label {
+  width: 8vw;
+  display: block;
+  font-weight: bold;
+  font-size: 15px;
+}
+label span {
+  color: var(--primary-color);
+}
+/* a.delete:hover {
+  background-color: var(--secondary-color);
+  color: var(--octonary-color);
+  transition: 400ms;
+} */
+.action {
+  gap: 12px;
+}
+a.delete {
+  padding: 8px 12px;
+  background-color: var(--octonary-color);
+}
+a.update {
+  padding: 8px 12px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+a.delete .d-flex {
+  gap: 8px;
+  color: var(--secondary-color);
+}
+a.update .d-flex {
+  gap: 8px;
+}
+.contact {
+  border: 1px solid var(--primary-color);
+  padding: 32px 16px;
+  margin-bottom: 20px;
+}
+.contact h3 {
+  color: var(--primary-color);
+  text-transform: inherit;
+  font-size: 20px;
+  font-weight: 600;
+}
+.contact .direction-column {
+  gap: 12px;
+}
+.header-contact {
+  margin-bottom: 20px;
+}
+.contact .direction-column label {
+  width: 12vw;
+  font-size: 18px;
+  font-weight: 500;
+} 
+.contact input {
+  padding: 8px 12px;
+  width: 25vw;
+}
+.add {
+  width: 11vw;
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 13px 11px;
+  font-weight: 500;
+}
+.add .d-flex {
+  gap: 8px;
+}
+#contact {
+  margin-bottom: inherit;
+}
+.update h1 {
+  margin-bottom: 30px;
+}
