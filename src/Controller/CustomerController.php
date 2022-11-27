@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use App\Entity\Customer;
 
 final class CustomerController extends AbstractController
 {
@@ -15,56 +16,56 @@ final class CustomerController extends AbstractController
     public function customers():Response
     {
         return $this->render('customer/customers.html.twig',[
-            'customers'=> CustomerRepository::getAllCustomers(),
+            'customers'=> Customer::getAllCustomers(), "customer" => "active"
         ]);
     }
 
-    #[Route(path:"/customer/{slug}", name:"customer", method:['GET'])]
+    #[Route(path:"/customer/{slug}", name:"customer", methods:['GET'])]
     public function customer(string $slug):Response
     {
-        if (CustomerRepository::isCustomer($slug)) {
+        if (Customer::isCustomer($slug)) {
 
             return $this->render('customer/customer.html.twig', [
-                "customer"=> CustomerRepository::getCustomer($slug),
+                "customer"=> Customer::getCustomer($slug),
             ]);
         }
 
         throw new NotFoundHttpException(sprintf('the Customer with slug %s dosent exists.', $slug));
     }
 
-    #[Route(path:"/deletecustomer/{slug}", name:"deletecustomer", method:['GET'])]
+    #[Route(path:"/deletecustomer/{slug}", name:"deletecustomer", methods :['GET'])]
     public function deleteCustomer(string $slug):Response
     {
-        if (CustomerRepository::isCustomer($slug)) {
+        if (Customer::isCustomer($slug)) {
 
             return $this->render('customer/deletecustomer.html.twig', [
-                "customer"=> CustomerRepository::getCustomer($slug),
+                "customer"=> Customer::getCustomer($slug),
             ]);
         }
 
         throw new NotFoundHttpException(sprintf('the Customer with slug %s dosent exists.', $slug));
     }
 
-    #[Route(path:"/updatecustomer/{slug}", name:"updatecustomer", method:['GET'])]
+    #[Route(path:"/updatecustomer/{slug}", name:"updatecustomer", methods:['GET'])]
     public function updateCustomer(string $slug):Response
     {
-        if (CustomerRepository::isCustomer($slug)) {
+        if (Customer::isCustomer($slug)) {
 
             return $this->render('customer/updatecustomer.html.twig', [
-                "customer"=> CustomerRepository::getCustomer($slug),
+                "customer"=> Customer::getCustomer($slug),
             ]);
         }
 
         throw new NotFoundHttpException(sprintf('the Customer with slug %s dosent exists.', $slug));
     }
 
-    #[Route(path:"/insertcustomer/{slug}", name:"insertcustomer", method:['GET'])]
+    #[Route(path:"/insertcustomer/{slug}", name:"insertcustomer", methods:['GET'])]
     public function insertCustomer(string $slug):Response
     {
-        if (CustomerRepository::isCustomer($slug)) {
+        if (Customer::isCustomer($slug)) {
 
             return $this->render('customer/insertcustomer.html.twig', [
-                "customer"=> CustomerRepository::getCustomer($slug),
+                "customer"=> Customer::getCustomer($slug),
             ]);
         }
 
