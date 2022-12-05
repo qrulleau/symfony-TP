@@ -12,7 +12,7 @@ class CustomerRepository{
 
     public static function isCustomer(string $slug): bool
     {
-        if(isset(self::CUSTOMERS[slug])) {
+        if(isset(self::CUSTOMERS[$slug])) {
 
             return true ;
         }
