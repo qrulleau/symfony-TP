@@ -27,7 +27,7 @@ class Project
   #[ORM\Column(type: 'string', length: 255)]
   private string $lasspass_folder;
 
-  #[ORM\Column(type: 'string', length: 255)]
+  #[ORM\Column(type: 'string', length: 255, nullable: true)]
   private string $link_mock_ups;
 
   #[ORM\Column(type: 'integer')]
@@ -42,7 +42,7 @@ class Project
 
   #[ORM\ManyToOne(targetEntity: Host::class)]
   #[ORM\JoinColumn(name:"host", referencedColumnName:"id")]
-  private Customer $host;
+  private Host $host;
 
   // #[ManyToOne(targetEntity: Address::class)]
   // #[JoinColumn(name: 'address_id', referencedColumnName: 'id')]
